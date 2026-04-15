@@ -17,365 +17,7 @@
   />
 
   
-  <!-- <style>
-
-   
-    /* reset */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f7fa;
-  color: #333;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* utilities */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.section {
-  padding: 80px 0;
-  text-align: center;
-  
-}
-
-.accent {
-  color: #667eea;
-}
-
-/* header */
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(255,255,255,.95);
-  /* backdrop-filter: blur(8px); */
-  box-shadow: 0 2px 6px rgba(0,0,0,.1);
-  z-index: 1000;
-}
-
-.site-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-}
-
-.logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
-.nav a {
-  margin-left: 30px;
-  font-weight: 500;
-  transition: color .3s;
-}
-.nav a:hover {
-  color: #667eea;
-}
-
-.menu-toggle {
-  display: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
-
-/* hero */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #fff;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-.hero-content p {
-  font-size: 1.25rem;
-  margin-bottom: 30px;
-}
-.btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background: #fff;
-  color: #333;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: transform .3s, background .3s;
-}
-.btn:hover {
-  background: #f0f0f0;
-  transform: translateY(-2px);
-}
-
-/* about */
-.about h2,
-.skills h2,
-.projects h2,
-.contact h2 {
-  font-size: 2.5rem; 
-  margin-bottom: 30px;
-  margin-top: 70px;
-}
-.about p {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-
-}
-
-/* skills */
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-  gap: 30px;
-  margin-top: 40px;
-  height: 200px;
-  
-  
-  
-}
-
-.skill-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 30px 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,.1);
-  transition: transform .1s, box-shadow .3s;
-  cursor: pointer;
-  
-   
-}
-
-.skill-card i {
-  font-size: 2.5rem;
-  color: #667eea;
-  margin-bottom: 15px;
-  margin-top: 30px;
-}
-.skill-card h3 {
-  font-size: 1.1rem;
-}
-.skill-card:hover {
-  transform: translateY(-5px);
- background-color: #555;
-  box-shadow: 0 8px 25px rgba(0,0,0,.15);
-}
-
-/* projects */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.project-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  cursor: pointer;
-  height: 150px;
-}
-.project-card img {
-  width: 100%;
-  display: block;
-  transform: scale(1.1);
-  transition: transform .4s;
-  
-}
-.project-card .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,.6);
-  color: #fff;
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
-  transition: opacity .3s;
-}
-.project-card:hover img {
-  transform: scale(1.1);
-}
-.project-card:hover .overlay {
-  opacity: 1;
-}
-.btn-sm {
-  margin-top: 10px;
-  padding: 8px 20px;
-  background: #667eea;
-  border-radius: 20px;
-}
-.btn-sm:hover {
-  background: #5568d3;
-}
-
-/* contact */
-.contact-form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.contact-form input,
-.contact-form textarea {
-  padding: 12px 15px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
-  resize: vertical;
-}
-.contact-form button {
-  align-self: flex-end;
-}
-
-/* footer */
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 0.9rem;
-}
-
-/* …existing reset and utility rules… */
-
-:root {
-  --bg-dark: #0a192f;
-  --bg-medium: #1e1e2f;
-  --accent: #64ffda;
-  --text-light: #f0f4f8;
-}
-
-body {
-  background: var(--bg-medium);
-  color: var(--text-light);
-}
-
-/* header */
-.site-header {
-  background: rgba(10,25,47,.95);
-}
-.logo .accent { color: var(--accent); }
-.nav a:hover { color: var(--accent); }
-
-/* hero */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 90vh;
-  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
-  padding: 0 20px;
-  flex-wrap: wrap;
-}
-.hero-content {
-  max-width: 600px;
-  text-align: left;
-  animation: fade-in .8s forwards;
-}
-.hero-content h1 { font-size: 3.2rem; }
-.hero-content p { font-size: 1.3rem; }
-.hero-image {
-  margin-left: 50px;
-  animation: fade-in 1s .5s forwards;
-}
-.hero-pic {
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--accent);
-  box-shadow: 0 10px 30px rgba(0,0,0,.5);
-}
-.btn {
-  background: var(--accent);
-  color: var(--bg-dark);
-}
-.btn:hover {
-  background: #52e8c8;
-}
-
-/* accent colour */
-.accent { color: var(--accent); }
-
-/* projects, skills, etc: just swap colours */
-.skill-card,
-.project-card,
-.contact-form input,
-.contact-form textarea {
-  background: #16213e;
-  color: var(--text-light);
-}
-
-
-/* footer */
-footer { background: #0a192f; }
-
-/* responsive tweaks */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-  }
-  .hero-image {
-    margin: 30px 0 0 0;
-  }
-  .hero-content { text-align: center; }
-}
-
-
-/* animations */
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-fade-in { animation: fade-in .8s forwards; }
-.delay-1 { animation-delay: .5s; }
-.delay-2 { animation-delay: 1s; }
-.animate-zoom-in { animation: fade-in .6s forwards; transform: scale(.8); }
-.delay-3 { animation-delay: 1.5s; }
-
-/* responsive */
-@media (max-width: 768px) {
-  .nav { display: none; }
-  .menu-toggle { display: block; }
-  .nav.open { display: flex; flex-direction: column; position: absolute; top: 60px; right: 20px; background: #fff; padding: 10px 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,.1); }
-  .nav.open a { margin: 10px 0; }
-  .hero-content h1 { font-size: 2.5rem; }
-}
-
-  </style> -->
+ 
 
   <style>
 
@@ -1001,7 +643,7 @@ h2{
   </a>
 </div> -->
     <div class="hero-image">
-      <img src="assets/yawar pic.jpg" alt="Yawar Pic" class="hero-pic" />
+      <img src="yawar pic.jpg" alt="Yawar Pic" class="hero-pic" />
     </div>
   </section>
   
@@ -1186,33 +828,33 @@ h2{
     <div class="badges-grid">
 
       <div class="badge-card">
-        <img src="assets/yawar bin kashif AI Fundamentals with IBM SkillsBuild cisco badge.png"  alt="Badge 1">
+        <img src="yawar bin kashif AI Fundamentals with IBM SkillsBuild cisco badge.png"  alt="Badge 1">
         <p>AI Fundamentals with IBM SkillsBuild Cisco Badge</p>
       </div>
 
       <div class="badge-card">
-        <img src="assets/yawar bin kashif html official Cisco badge.png" alt="Badge 2">
+        <img src="yawar bin kashif html official Cisco badge.png" alt="Badge 2">
         <p>Html Essentials Cisco badge</p>
       </div>
 
       <div class="badge-card">
-        <img src="assets/yawar bin kashif css essentials cisco badge.png" alt="Badge 3">
+        <img src="yawar bin kashif css essentials cisco badge.png" alt="Badge 3">
         <p> CSS Essentials Cisco Badge</p>
       </div>
 
       <div class="badge-card">
-        <img src="assets/yawar bin kashif javascript essentials cisco badge.png" alt="Badge 4">
+        <img src="yawar bin kashif javascript essentials cisco badge.png" alt="Badge 4">
         <p>Javascript Essentials 1 Cisco Badge</p>
       </div>
 
       <div class="badge-card">
-        <img src="assets/yawar bin kashif javascript essentials 2 cisco badge.png" alt="Badge 5">
+        <img src="yawar bin kashif javascript essentials 2 cisco badge.png" alt="Badge 5">
         <p>Javascript Essentials 2 Cisco Badge</p>
       </div>
 
 
       <div class="badge-card">
-        <img src="assets/introduction-to-modern-ai badge.png" alt="Badge 8">
+        <img src="introduction-to-modern-ai badge.png" alt="Badge 8">
         <p>Introduction to Modern Ai Badge</p>
       </div>
 
